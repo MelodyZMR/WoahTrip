@@ -1,0 +1,122 @@
+<!Doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>sign up a tour</title>
+	<link rel="stylesheet" href="https://cdn.staticfile.net/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Jersey+10+Charted&family=Permanent+Marker&family=Zeyada&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/style.css">
+	<script src="../js/form_external.js"></script>
+	<script type="text/javascript" src="..js/text_external.js"></script>
+</head>
+<body>
+	<div class="header">
+		<nav>   
+			<a href="../index.html">
+			 <img src="../image/logo(1).png" alt="logo" class="logo">
+			</a>
+			<ul class="nav-links">
+				<li><a href="../index.html">&#x1F3E0Home</a></li>
+				<li><a href="../pages/Tour.html">&#x1F4CDTour</a></li>
+				<li><a href="../pages/sign a trip.html">&#x1F4C6Sign up</a></li>
+				<li><a href="../pages/win a priz.html">&#x1F4B8Win a prize</a></li>
+				</ul>
+			</nav>
+            <div id="scroll-container">
+              <div id="scroll-text">Welcome to New Zealand</div>
+            </div>
+		   
+	</div>
+	<h1>Sign up a tour</h1>
+	<form role="form" id="signUp" onsubmit="submitForm(event)">
+		<div class="form-group">
+			<label for="yourName">Your full name * 
+				<input type="text" id="yourName" name="yourName" placeholder="Full name" pattern="[A-Za-z\s]{3,20}" required/>
+			</label>
+		</div>
+		<div class="form-group">
+			<label for="birthday">Date of birth *
+				<input type="date" id="birthday" name="birthday" required oninput="validateBD()"/>
+			</label>
+			<div id="birthdayError" class=error>Birthday must be earlier than today</div>
+		</div>
+		<div class="form-group">
+			<label>Gender
+				<input type="radio" id="male" name="gender" value="Male"/> Male
+				<input type="radio" id="female" name="gender" value="Female"/> Female
+			</label>
+		</div>
+		<div class="form-group">
+			<label for="yourPhone">Your phone number *
+				<input type="tel" id="yourPhone" name="yourPhone" pattern="[0-9]{10}" required/>
+			</label>
+		</div> 
+		<div class="form-group">
+			<label>Your email *
+				<input type="email" name="yourEmail" required/>
+			</label>
+		</div>
+		<div class="form-group">
+			<label>Where would you like to go?<br>
+				<input type="radio" id="Queenstown" name="place" value="Queenstown"/> Queenstown<br>
+				<input type="radio" id="Wanaka" name="place" value="Wanaka"/> Wanaka<br>
+				<input type="radio" id="LakeTekapo" name="place" value="LakeTekapo"/> Lake Tekapo<br>
+				<input type="radio" id="WestCoast" name="place" value="WestCoast"/> West Coast<br>
+				<input type="radio" id="DoubtfulSound" name="place" value="DoubtfulSound"/> Doubtful Sound<br>
+				<input type="radio" id="NorthIsland" name="place" value="NorthIsland"/> North NorthIsland
+			</label>
+		</div>
+		<div class="form-group">		
+			<label>Trip dates *<br>
+				From<input type="date" id="TStartDate" name="tripDate" required oninput="validateTD()"/>
+				to<input type="date" id="TEndDate" name="tripDate" required oninput="validateTD()"/>
+			</label>	
+				<div id="tripDateError" class=error>Please check the trip date again</div><br>
+		</div>
+		<div class="form-group">	
+			<label for="group">How many group members?
+				<select id="group" name="group">
+					<option value="option1">1</option>
+					<option value="option2">2</option>
+					<option value="option3">3</option>
+					<option value="option4">4</option>
+				</select>
+			</label>	
+		</div>
+		<div class="form-group">
+			<label>Do you have any special needs?<br>
+			<textarea id="comment" name="comment" rows="6" cols="40"></textarea>
+			</label>
+		</div>
+		<div class="form-group">
+			<label><input type="checkbox" id="agreement" name="agreement" required/>I agree to your T&C</label>
+		</div>
+		<div class="form-group">
+			<label><input type="checkbox" id="subscribe" name="subscribe"/>I want to subscribe to your monthly newsletter</label>
+		</div>				
+		<button type="submit" id="submit">
+            <img src="../image/go.jpg" alt="go"/>
+        </button>  		
+		
+	</form>
+	<footer class="page-footer">
+		<div class ="top">
+			<h4>Woah.Trip</h4>
+		   	<p>Let's discover the beauty of the world together!</p>
+		</div>
+		<div class="contact">
+			<h5>Contact Us</h5>
+		   	<h5>Melody_run@outlook.com</h5>
+
+		</div>
+		<div class="bottom">
+			<h5>Copyright 2024 Follow Us</h5>
+		</div>
+		 
+	</footer>
+</body>
+</html>
